@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    .visible {
+    opacity: {{ vis }};
+    top: 0px;
+    border: 1px solid #000; padding: 5px;
+    color: #333;  background: #ECF5E4;
+    }
+</style>
+<div>
+    <h1> {{ name }} </h1>
+     <form method="POST">
+       <div class="visible">
+    <h1>Перейти в</h1>
+     <form method="POST">
+	<input name="add">
+     <input type="submit">
+         <input type="submit" name="game_plan" value="Go player mode">
+       </div>
+         <form method="POST">
+<input type="submit" name="change_name" value="change name">
+</form>
+     </form>
+<object data="template/example.html" width="500" height="500"></object>
+        <h2>Описание сцены: {{ txt }}</h2>
+    <p> HP {{ hp }}</p>
+    <p> energy {{ energy }}</p>
+ </form>
+
+    <h2>Добавить соседа</h2>
+ <form method="POST">
+	<input name="sv">
+     <input type="submit">
+ </form>
+
+<form method="POST">
+    <h3> Введите описание сцены</h3>
+<input name ="desc">
+    <input type="submit">
+</form>
+</div>
+<form method="POST">
+<h1> Соседи </h1>
+{% for index in nb %}
+<input type="submit" name="sosed" value= {{ index }} id="huaylo">
+    <input type="hidden" name="nicksecret" value= {{ j }} >
+{% endfor %}
+</form>
+<script>
+includeHTML();
+</script>
+</body>
+</html>
