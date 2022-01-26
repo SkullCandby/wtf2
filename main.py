@@ -147,7 +147,7 @@ def my_form_post():
         print(g)
         print(type(g))
         return redirect('/')
-    a9*w/
+
     return redirect('/game')
 
 @app.route('/', methods=["POST","GET"])
